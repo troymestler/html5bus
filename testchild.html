@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="html5bus.js" type="text/javascript"></script>
+    <script>
+        Html5Bus.connectToParent("file://", function (evt) {
+            console.log(evt);
+            Html5Bus.subscribe("file://", "msg", function (msg) {
+                console.log("message received: " + msg);
+            });
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>

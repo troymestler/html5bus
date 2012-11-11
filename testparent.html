@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="html5bus.js" type="text/javascript"></script>
+    <script>
+        var child = window.open('testchild.html');
+        Html5Bus.connectToChild(child, "file://", function (evt) {
+            console.log(evt);
+            Html5Bus.send(child, 'msg', 'hello there');
+        }, 5000);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
